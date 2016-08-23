@@ -9,7 +9,8 @@ public class SimpleMovingAverage {
 	ArrayList<CandleStick> candles;
 	int numberOfCandles;
 	double sma;
-	
+
+
 	public SimpleMovingAverage(ArrayList<CandleStick> candles){
 		this.candles = candles;
 		this.numberOfCandles = candles.size();
@@ -25,4 +26,12 @@ public class SimpleMovingAverage {
 		return totalSumOfPrices/numberOfCandles;
 	}
 	
+
+	
+	public double getSma() {
+		return calculateSMA();
+	}
+
+
+
 }
