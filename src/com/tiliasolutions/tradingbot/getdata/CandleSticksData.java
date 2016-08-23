@@ -89,6 +89,10 @@ public class CandleSticksData {
 		    		candle.getBoolean("complete")));
 		  }
 		
+		
+		for (CandleStick c : candleSticks){
+			System.out.println(c.toString());
+		}
 	}
 	
 	//save data from ArrayList to disk
@@ -138,11 +142,12 @@ public class CandleSticksData {
 	public static void main(String[] args){
 		CandleSticksData csd = new CandleSticksData(Instruments.EUR_USD.toString(),
 				CandleStickGranularity.S5.toString(),
-				1000);
+				10);
 		csd.saveCandleSticksToArray(csd.getCandleSticks(csd.getInstrument(),
 				csd.getGranularity(), csd.getCount()));
+
 		
-		csd.saveToDisk();
+		//csd.saveToDisk();
 	}
 	
 	
